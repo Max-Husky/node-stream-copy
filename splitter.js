@@ -1,7 +1,7 @@
 const Writable = require('stream').Writable;
 const CopyStream = require('./copy.js');
 
-class Splitter extends Writable {
+class SplitterStream extends Writable {
   /**
    * The copy streams
    * @private @type {CopyStream[]} @readonly
@@ -122,6 +122,8 @@ class Splitter extends Writable {
     this._writev([{chunk: chunk, encoding: encoding}], cb);
   }
 }
+
+module.exports = SplitterStream;
 
 /**
  * @typedef {Object[]} Chunks
