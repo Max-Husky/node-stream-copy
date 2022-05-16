@@ -1,0 +1,20 @@
+{
+  "name": "@maxhusky/stream-copy",
+  "version": "0.0.1",
+  "main": "./splitter.js",
+  "description": "Copies one stream into many duplicate streams",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Max-Husky/node-stream-copy.git"
+  },
+  "keywords": [
+    "stream",
+    "copy"
+  ],
+  "author": {"name": "MaxHusky", "email": "projects@maxhusky.net", "url": "https://github.com/Max-Husky"},
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/Max-Husky/node-stream-copy/issues"
+  },
+  "homepage": "https://github.com/Max-Husky/node-stream-copy#readme"
+}
