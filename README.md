@@ -16,7 +16,8 @@ The copy stream recieves a copy of all the data sent to the `SplitterStream`
 
 ## Example
 The following will create 4 copies of `fileToCopy.txt` named: `copy0.txt`, `copy1.txt`, `copy2.txt`, and `copy3.txt`
-    const SplitterStream = require("@maxhusky/SplitterStream");
+
+    const SplitterStream = require("@maxhusky/stream-copy");
     const fs = require("fs");
     
     // creating the splitter and all the copy streams
