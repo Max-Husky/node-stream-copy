@@ -1,5 +1,5 @@
 {
-  "name": "@maxhusky/stream-copy",
+  "name": "@max-husky/stream-copy",
   "version": "0.0.1",
   "main": "./splitter.js",
   "description": "Copies one stream into many duplicate streams",
