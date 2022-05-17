@@ -50,7 +50,7 @@ class SplitterStream extends Writable {
    * @param {number} id The id of the copy stream
    * @param {*} copyStream The copy stream
    */
-  #closeCopy(id, copyStream) {
+  #closeCopy = function(id, copyStream) {
     // removing the stream from the copy list
     let i = this.#copies.indexOf(copyStream);
     if (i >= 0) this.#copies.splice(i, 1);
@@ -63,7 +63,7 @@ class SplitterStream extends Writable {
    * removes id from the waiting list and starts copying if empty
    * @param {number} id The id to remove
    */
-  #ready(id) {
+  #ready = function (id) {
     let i = this.#waiting.indexOf(id);
     if (i >= 0) this.#waiting.splice(i, 1);
 
@@ -120,6 +120,12 @@ class SplitterStream extends Writable {
 
   _write(chunk, encoding, cb) {
     this._writev([{chunk: chunk, encoding: encoding}], cb);
+  }
+
+  _final() {
+    for (let i of this.#copies) {
+      i.push(null);
+    }
   }
 }
 

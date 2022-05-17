@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/Max-Husky/node-stream-copy.git"
   },
+  "scripts": {
+    "test": "node ./test.js"
+  },
   "keywords": [
     "stream",
     "copy"
